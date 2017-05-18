@@ -1,0 +1,13 @@
+.dshbColumnContent{
+    min-height: 86vh;
+    margin: 12px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+.columnTitle{
+   color: #525152;
+   text-transform: uppercase;
+   text-align: center;
+   padding:12px 0;
+   border-bottom: 1px solid #eee;
+}

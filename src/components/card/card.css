@@ -1,0 +1,38 @@
+.dshbCard{
+  width: calc(100% - 24px);
+  margin: 12px auto;
+  min-height: 160px;
+  background: #eee;
+  border-radius: 4px;
+  padding: 4px;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome and Opera */
+}
+.dshbCard:hover{
+  cursor: move;
+}
+.dshbCard p{
+  margin:4px 12px;
+}
+.cardTitle{
+  font-weight: bold;
+  color:cadetblue;
+}
+.cardDesc{
+  font-size: 14px;
+  color: chocolate;
+  min-height: 80px;
+  border: 1px solid chocolate;
+  border-radius: 4px;
+  padding: 4px;
+}
+.cardId,
+.cardStatus{
+   font-size: 13px;
+   color:#525152;
+}
