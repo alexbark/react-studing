@@ -1,6 +1,7 @@
 // Dependencies
 import React from 'react';
 import Column from '../column/Column';
+import { findParentNode } from '../../utilities/util'
 
 class Dashboard extends React.Component{
   constructor(props) {
@@ -27,9 +28,10 @@ class Dashboard extends React.Component{
     e.preventDefault();
     let cardId = e.dataTransfer.getData("card");
     if(e.target.className.indexOf("_dshbColumnContent_") >= 0){
-       let column = e.target.parentNode.parentNode.className.split('-').pop();
+        let parentColumn = findParentNode(e.target, "dshb-column-"),
+            columnStatusName = parentColumn.className.split('-').pop();
        e.target.appendChild(document.getElementById(cardId));
-       this.changeStatus( column, cardId)
+       this.changeStatus( columnStatusName, cardId)
     }
   }
   dragEnd(e){
@@ -55,6 +57,7 @@ class Dashboard extends React.Component{
       el.className = el.className.split(/\s/g).shift();
     }, 500)
   }
+
   render(){
       return (
         <div onDragOver={this.dragEnter} onDrop={this.dragDrop.bind(this)}
